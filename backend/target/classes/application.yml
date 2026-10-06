@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: job-tracker
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/jobtracker}
+
+  web:
+    cors:
+      allowed-origins: http://localhost:5173
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: WARN
